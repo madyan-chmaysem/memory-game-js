@@ -20,6 +20,7 @@ html2.value = "0";
 
 const card1 = document.createElement("img");
 card1.src = "./images/card.jpg";
+card1.classList.add("domy1");
 const card2 = document.createElement("img");
 card2.src = "./images/card.jpg";
 const card3 = document.createElement("img");
@@ -44,10 +45,10 @@ div3.appendChild(card3);
 div4.appendChild(card4);
 div5.appendChild(card5);
 div6.appendChild(card6);
-
+const arr = [css1, css2, html1, html2, js2, js1];
+const arr1=[]
 const start = document.getElementById("start");
-start.addEventListener("click", () => { 
-  const arr = [css1, css2, html1, html2, js2, js1];
+start.addEventListener("click", () => {
   let count = 0;
   for (let i = 0; i < arr.length; i++) {
     count = 0;
@@ -63,4 +64,66 @@ start.addEventListener("click", () => {
       }
     }
   }
+
+
+div1.addEventListener("click", () => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].value == div1.id) {
+      div1.removeChild(div1.firstChild);
+      arr1.push(arr[i])
+      div1.appendChild(arr[i]);
+      break;
+    }
+  }
+});
+div2.addEventListener("click", () => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].value == div2.id) {
+      div2.removeChild(div2.firstChild);
+      arr1.push(arr[i])
+      div2.appendChild(arr[i]);
+      break;
+    }
+  }
+});
+div3.addEventListener("click", () => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].value == div3.id) {
+      div3.removeChild(div3.firstChild);
+      arr1.push(arr[i])
+      div3.appendChild(arr[i]);
+      break;
+    }
+  }
+});
+div4.addEventListener("click", () => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].value == div4.id) {
+      div4.removeChild(div4.firstChild);
+      arr1.push(arr[i])
+      div4.appendChild(arr[i]);
+      break;
+    }
+  }
+});
+div5.addEventListener("click", () => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].value == div5.id) {
+      div5.removeChild(div5.firstChild);
+      arr1.push(arr[i])
+      div5.appendChild(arr[i]);
+      break;
+    }
+  }
+});
+div6.addEventListener("click", () => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].value == div6.id) {
+      div6.removeChild(div6.firstChild);
+      arr1.push(arr[i])
+      div6.appendChild(arr[i]);
+      break;
+    }
+  }
+});
 });
