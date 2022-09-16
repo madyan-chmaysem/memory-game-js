@@ -4,6 +4,10 @@ const js1 = document.createElement("img");
 const css2 = document.createElement("img");
 const html2 = document.createElement("img");
 const js2 = document.createElement("img");
+let a=20
+document.getElementById('score').innerHTML=a
+
+
 
 css1.src = "./images/css.png";
 css2.src = "./images/css.png";
@@ -46,7 +50,7 @@ div4.appendChild(card4);
 div5.appendChild(card5);
 div6.appendChild(card6);
 const arr = [css1, css2, html1, html2, js2, js1];
-const arr1 = [];
+let arr1 = [];
 const start = document.getElementById("start");
 start.addEventListener("click", () => {
   let count = 0;
@@ -129,12 +133,16 @@ start.addEventListener("click", () => {
 const counter = document.getElementById("game-screen");
 counter.addEventListener("click", () => {
   console.log("**");
+  console.log(arr1.length,"/*/*/* ")
   if (arr1.length == 2) {
     if (arr1[0].src == arr1[1].src) {
+      a-=5
+      document.getElementById('score').innerHTML=a
+
     } else {
-      console.log("hi");
-      arr1.pop;
-      arr1.pop;
+      
+      arr1=[]
+      console.log(arr1.length,'-')
 
       div1.removeChild(div1.firstChild);
       div2.removeChild(div2.firstChild);
@@ -142,47 +150,67 @@ counter.addEventListener("click", () => {
       div4.removeChild(div4.firstChild);
       div5.removeChild(div5.firstChild);
       div6.removeChild(div6.firstChild);
+      div1.appendChild(card1);
+div2.appendChild(card2);
+div3.appendChild(card3);
+div4.appendChild(card4);
+div5.appendChild(card5);
+div6.appendChild(card6);
     }
   }
 
   if (arr1.length == 4) {
     if (arr1[2].src == arr1[3].src) {
+      a-=5
+      document.getElementById('score').innerHTML=a
     } else {
-      arr1.pop;
-      arr1.pop;
-      arr1.pop;
-      arr1.pop;
+    arr1=[]
+      console.log(arr1.length,"/")
+
       div1.removeChild(div1.firstChild);
       div2.removeChild(div2.firstChild);
       div3.removeChild(div3.firstChild);
       div4.removeChild(div4.firstChild);
       div5.removeChild(div5.firstChild);
       div6.removeChild(div6.firstChild);
+      div1.appendChild(card1);
+div2.appendChild(card2);
+div3.appendChild(card3);
+div4.appendChild(card4);
+div5.appendChild(card5);
+div6.appendChild(card6);
     }
   }
   if (arr1.length == 6) {
     if (arr1[4].src == arr1[5].src) {
+      a+=10
+      document.getElementById('score').innerHTML=a
+      
+
     } else {
-      arr1.pop;
-      arr1.pop;
-      arr1.pop;
-      arr1.pop;
-      arr1.pop;
-      arr1.pop;
+     arr1=[]
+      console.log(arr1.length,"*")
+
       div1.removeChild(div1.firstChild);
       div2.removeChild(div2.firstChild);
       div3.removeChild(div3.firstChild);
       div4.removeChild(div4.firstChild);
       div5.removeChild(div5.firstChild);
       div6.removeChild(div6.firstChild);
+      div1.appendChild(card1);
+div2.appendChild(card2);
+div3.appendChild(card3);
+div4.appendChild(card4);
+div5.appendChild(card5);
+div6.appendChild(card6);
     }
   }
 });
 const restart = document.getElementById("rest");
 restart.addEventListener("click", () => {
-  for(let i=0;i<arr1.length;i++){
-    arr1.pop
-  }
+ 
+ arr1=[]
+console.log(arr1.length)
   div1.appendChild(card1);
   div2.appendChild(card2);
   div3.appendChild(card3);
@@ -205,3 +233,4 @@ restart.addEventListener("click", () => {
     }
   }
 });
+
