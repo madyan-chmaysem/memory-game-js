@@ -136,11 +136,11 @@ counter.addEventListener("click", () => {
   console.log(arr1.length,"/*/*/* ")
   if (arr1.length == 2) {
     if (arr1[0].src == arr1[1].src) {
-      a-=5
-      document.getElementById('score').innerHTML=a
+     
 
     } else {
-      
+      a-=5
+      document.getElementById('score').innerHTML=a
       arr1=[]
       console.log(arr1.length,'-')
 
@@ -161,11 +161,12 @@ div6.appendChild(card6);
 
   if (arr1.length == 4) {
     if (arr1[2].src == arr1[3].src) {
-      a-=5
-      document.getElementById('score').innerHTML=a
+     
     } else {
     arr1=[]
       console.log(arr1.length,"/")
+      a-=5
+      document.getElementById('score').innerHTML=a
 
       div1.removeChild(div1.firstChild);
       div2.removeChild(div2.firstChild);
@@ -211,6 +212,12 @@ restart.addEventListener("click", () => {
  
  arr1=[]
 console.log(arr1.length)
+div1.removeChild(div1.firstChild);
+div2.removeChild(div2.firstChild);
+div3.removeChild(div3.firstChild);
+div4.removeChild(div4.firstChild);
+div5.removeChild(div5.firstChild);
+div6.removeChild(div6.firstChild);
   div1.appendChild(card1);
   div2.appendChild(card2);
   div3.appendChild(card3);
